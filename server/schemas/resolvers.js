@@ -15,7 +15,7 @@ const resolvers = {
           },
     },
 
-    Mutations: {
+    Mutation: {
 
         login: async (parent, {email, password}) =>  {
             const user = await User.find(email);
@@ -69,7 +69,7 @@ const resolvers = {
               }
         
               throw new AuthenticationError('You need to be logged in!');
-        }
+        },
     }
 }
 
